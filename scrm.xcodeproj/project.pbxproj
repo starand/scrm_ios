@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		625C0A622184633900EBFCDA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625C0A612184633900EBFCDA /* LoginViewController.swift */; };
+		625C0A64218463A300EBFCDA /* UserUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625C0A63218463A300EBFCDA /* UserUtils.swift */; };
+		625C0A6721846B9200EBFCDA /* NetworkUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625C0A6621846B9200EBFCDA /* NetworkUtils.swift */; };
 		62E46C0E217F6A97006F1B95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E46C0D217F6A97006F1B95 /* AppDelegate.swift */; };
 		62E46C10217F6A97006F1B95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E46C0F217F6A97006F1B95 /* ViewController.swift */; };
 		62E46C13217F6A97006F1B95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62E46C11217F6A97006F1B95 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		625C0A612184633900EBFCDA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		625C0A63218463A300EBFCDA /* UserUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUtils.swift; sourceTree = "<group>"; };
+		625C0A6621846B9200EBFCDA /* NetworkUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtils.swift; sourceTree = "<group>"; };
 		62E46C0A217F6A97006F1B95 /* scrm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scrm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E46C0D217F6A97006F1B95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62E46C0F217F6A97006F1B95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +41,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		625C0A60218460A400EBFCDA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				62E46C0F217F6A97006F1B95 /* ViewController.swift */,
+				62E46C11217F6A97006F1B95 /* Main.storyboard */,
+				62E46C16217F6A9A006F1B95 /* LaunchScreen.storyboard */,
+				625C0A612184633900EBFCDA /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		625C0A6521846B4A00EBFCDA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				625C0A63218463A300EBFCDA /* UserUtils.swift */,
+				625C0A6621846B9200EBFCDA /* NetworkUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		62E46C01217F6A97006F1B95 = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +81,10 @@
 			isa = PBXGroup;
 			children = (
 				62E46C0D217F6A97006F1B95 /* AppDelegate.swift */,
-				62E46C0F217F6A97006F1B95 /* ViewController.swift */,
-				62E46C11217F6A97006F1B95 /* Main.storyboard */,
+				625C0A60218460A400EBFCDA /* ViewControllers */,
 				62E46C14217F6A9A006F1B95 /* Assets.xcassets */,
-				62E46C16217F6A9A006F1B95 /* LaunchScreen.storyboard */,
 				62E46C19217F6A9A006F1B95 /* Info.plist */,
+				625C0A6521846B4A00EBFCDA /* Utils */,
 			);
 			path = scrm;
 			sourceTree = "<group>";
@@ -135,7 +160,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				625C0A622184633900EBFCDA /* LoginViewController.swift in Sources */,
 				62E46C10217F6A97006F1B95 /* ViewController.swift in Sources */,
+				625C0A6721846B9200EBFCDA /* NetworkUtils.swift in Sources */,
+				625C0A64218463A300EBFCDA /* UserUtils.swift in Sources */,
 				62E46C0E217F6A97006F1B95 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L7P3R4HARK;
 				INFOPLIST_FILE = scrm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +329,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L7P3R4HARK;
 				INFOPLIST_FILE = scrm/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
