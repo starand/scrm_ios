@@ -17,15 +17,27 @@ class LoginViewController: UIViewController {
         let login = loginTextView.text!
         let password = passwordTextView.text!
         
-        if (login == "1" && password == "1") {
-            dismiss(animated: true, completion: nil)
+        if login.isEmpty || password.isEmpty {
+            self.showAlertMessage(title: "Login", msg: "Username and password cannot be empty")
+        } else {
+            UserUtils.loginUser(login: login, password: password) { response in
+                switch (response) {
+                case .error(let message):
+                    self.showAlertMessage(title: "Login", msg: message)
+                case .success(_):
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let (login_, _, _) = UserUtils.loadUserData()
+        if let login = login_ {
+            loginTextView.text = login
+        }
     }
     
 
