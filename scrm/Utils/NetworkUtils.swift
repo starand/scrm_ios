@@ -18,16 +18,27 @@ class NetUtils {
     static let serverAddress = "https://www.boyclothing.lviv.ua/scrm/m/?check="
     
     static let loginPage = "login"
-    static let contactsPage = "contact_list"
-    static let categoriesPage = "categories"
-    static let tasksPage = "tasks"
-    static let historyPage = "notes"
+    static let remindersPage = "reminders"
     
+    static let contactsPage = "contact_list"
+    static let addContactPage = "add_contact"
+    
+    static let categoriesPage = "categories"
+    static let addCategoryPage = "add_category"
+
+    static let tasksPage = "tasks"
+    static let addTaskPage = "add_task"
+    static let deleteTaskPage = "delete_task"
+    
+    static let historyPage = "notes"
+    static let addNotePage = "add_note"
+    static let deleteNotePage = "delete_note"
+
     class func executeRequest(urlAddress: String, handler: @escaping (Response) -> Void) {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         
-        let url = URL(string: urlAddress)!
+        let url = URL(string: serverAddress + urlAddress)!
         var request = URLRequest(url: url)
         if let sessionId = UserUtils.loadSessionId() {
             request.addValue(sessionId, forHTTPHeaderField: "Cookie")
@@ -50,6 +61,7 @@ class NetUtils {
                     return
             }
 
+            Cache.storeToCache(url: urlAddress, content: jsonData)
             print(jsonData)
             do {
                 let json = try JSONSerialization.jsonObject(with: jsonData.data(using: .utf8)!, options: [])
@@ -84,31 +96,77 @@ class NetUtils {
     }
    
     class func login(user: String, pswd: String, handler: @escaping (Response) -> Void) {
-        let request = serverAddress + "\(loginPage):name=\(user.base64encoded):pswd=\(pswd.base64encoded)".base64encoded
+        let request = "\(loginPage):name=\(user.base64encoded):pswd=\(pswd.base64encoded)".base64encoded
         executeRequest(urlAddress: request, handler: handler)
     }
 
-    class func fetchContacts(handler: @escaping (Response) -> Void) {
-        let request = serverAddress + "\(contactsPage)".base64encoded
+    class func fetchContacts(handler: @escaping (Response) -> Void) -> String  {
+        let request = "\(contactsPage)".base64encoded
         executeRequest(urlAddress: request, handler: handler)
+        return request
     }
     
-    class func fetchCategories(handler: @escaping (Response) -> Void) {
-        let request = serverAddress + "\(categoriesPage)".base64encoded
+    class func fetchCategories(handler: @escaping (Response) -> Void) -> String {
+        let request = "\(categoriesPage)".base64encoded
         executeRequest(urlAddress: request, handler: handler)
+        return request
     }
     
-    class func fetchTasks(_ contactId: Int, handler: @escaping (Response) -> Void) {
+    class func fetchTasks(_ contactId: Int, handler: @escaping (Response) -> Void) -> String {
         let id = "\(contactId)"
-        let request = serverAddress + "\(tasksPage):contactId=\(id.base64encoded)".base64encoded
+        let request = "\(tasksPage):contactId=\(id.base64encoded)".base64encoded
+        executeRequest(urlAddress: request, handler: handler)
+        return request
+    }
+    
+    class func fetchNotes(_ contactId: Int, handler: @escaping (Response) -> Void) -> String {
+        let id = "\(contactId)"
+        let request = "\(historyPage):contactId=\(id.base64encoded)".base64encoded
+        executeRequest(urlAddress: request, handler: handler)
+        return request
+    }
+    
+    class func fetchReminders(handler: @escaping (Response) -> Void) {
+        let request = "\(remindersPage)".base64encoded
         executeRequest(urlAddress: request, handler: handler)
     }
     
-    class func fetchNotes(_ contactId: Int, handler: @escaping (Response) -> Void) {
+    class func addNote(_ contactId: Int, title: String, desc: String, handler: @escaping (Response) -> Void) {
         let id = "\(contactId)"
-        let request = serverAddress + "\(historyPage):contactId=\(id.base64encoded)".base64encoded
+        let request = "\(addNotePage):contactId=\(id.base64encoded):title=\(title.base64encoded):desc=\(desc.base64encoded)".base64encoded
         executeRequest(urlAddress: request, handler: handler)
     }
+    
+    class func deleteNote(_ noteId: Int, contactId: Int, handler: @escaping (Response) -> Void) {
+        let id = "\(noteId)", contact = "\(contactId)"
+        let request = "\(deleteNotePage):id=\(id.base64encoded):contact=\(contact.base64encoded)".base64encoded
+        executeRequest(urlAddress: request, handler: handler)
+    }
+    
+    class func addTask(_ contactId: Int, title: String, desc: String, date: String, time: String, repeat_: Int, remind: Int, handler: @escaping (Response) -> Void) {
+        let id = "\(contactId)", repeatId = "\(repeat_)", remindId = "\(remind)"
+        let request = "\(addTaskPage):contactId=\(id.base64encoded):title=\(title.base64encoded):desc=\(desc.base64encoded):date=\(date.base64encoded):time=\(time.base64encoded):repeat=\(repeatId.base64encoded):remind=\(remindId.base64encoded)"
+        print(request)
+        executeRequest(urlAddress: request.base64encoded, handler: handler)
+    }
+    
+    class func deleteTask(_ taskId: Int, contactId: Int, handler: @escaping (Response) -> Void) {
+        let id = "\(taskId)", contact = "\(contactId)"
+        let request = "\(deleteTaskPage):id=\(id.base64encoded):contact=\(contact.base64encoded)".base64encoded
+        executeRequest(urlAddress: request, handler: handler)
+    }
+    
+    class func addContact(name: String, phone: String, sex: String, category: Int, handler: @escaping (Response) -> Void) {
+        let catId = "\(category)"
+        let request = "\(addContactPage):name=\(name.base64encoded):phone=\(phone.base64encoded):sex=\(sex.base64encoded):cat=\(catId.base64encoded)".base64encoded
+        executeRequest(urlAddress: request, handler: handler)
+    }
+    
+    class func addCategory(name: String, desc: String, handler: @escaping (Response) -> Void) {
+        let request = "\(addCategoryPage):name=\(name.base64encoded):phone=\(desc.base64encoded)".base64encoded
+        executeRequest(urlAddress: request, handler: handler)
+    }
+    
 }
 
 extension String {

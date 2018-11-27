@@ -20,4 +20,23 @@ extension UIViewController {
             self.present(alert, animated: true)
         }
     }
+    
+    func addAction(_ view: UIView, action: Selector) {
+        let tap = UITapGestureRecognizer(target: self, action: action)
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(tap)
+    }
+    
+    func performSegue(_ name: String) {
+        DispatchQueue.main.async {
+            self.performSegue(withIdentifier: name, sender: self)
+        }
+    }
+}
+
+extension UITextField {
+    func loadDropdownData(data: [String]) {
+        self.inputView = ComboPickerView(pickerData: data, dropdownField: self)
+        self.resignFirstResponder()
+    }
 }

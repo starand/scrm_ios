@@ -9,22 +9,47 @@
 import UIKit
 
 class PersonViewController: UIViewController {
+    
+    static var personId: Int = 0
 
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var mailLabel: UILabel!
+    @IBOutlet weak var categoryLabel: UILabel!
+    
+    @IBOutlet weak var phoneImage: UIImageView!
+    @IBOutlet weak var emailImage: UIImageView!
+    @IBOutlet weak var categoryImage: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if PersonViewController.personId >= 0 {
+            loadPersonData()
+        }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
+    func loadPersonData() {
+        let contacts = PeopleViewController.contacts
+        let idx = PersonViewController.personId
+        let categories = ViewController.categories
+        
+        // find person
+        for person in PeopleViewController.contacts {
+            if person.id == PersonViewController.personId {
+                nameLabel.text = person.name
+                phoneLabel.text = person.phone
+                mailLabel.text = person.mail
+                categoryLabel.text = categories.count > person.cat ? categories[person.cat].name : "Not set"
+                phoneImage.image = UIImage(named: "phone.png")
+                emailImage.image = UIImage(named: "email.png")
+                categoryImage.image = UIImage(named: "category.png")
+            }
+        }
+    }
 }

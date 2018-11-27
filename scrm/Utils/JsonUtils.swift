@@ -42,7 +42,7 @@ class JsonUtils {
         for _item in contacts {
             if let item = _item as? [String: Any],
                 let _id = item["id"] as? String, let id = Int(_id),
-                let _cat = item["id"] as? String, let cat = Int(_cat),
+                let _cat = item["cat"] as? String, let cat = Int(_cat),
                 let name = item["name"] as? String,
                 let phone = item["phone"] as? String,
                 let sex = item["sex"] as? String,
@@ -99,6 +99,29 @@ class JsonUtils {
                 
                 let task = Note(id: id, time: time, message: message, title: title)
                 result.append(task)
+            }
+        }
+        
+        return result
+    }
+    
+    class func parseReminders(_ json: [String: Any]) -> [Reminder] {
+        var result: [Reminder] = []
+        
+        guard let reminders = json["reminders"] as? [Any] else {
+            return result
+        }
+        
+        for _item in reminders {
+            if let item = _item as? [String: Any],
+                let _id = item["tid"] as? String, let tid = Int(_id),
+                let _cid = item["cid"] as? String, let cid = Int(_cid),
+                let title = item["title"] as? String,
+                let body = item["desc"] as? String,
+                let time = item["time"] as? String {
+                
+                let reminder = Reminder(task: tid, contact: cid, time: time, title: title, body: body)
+                result.append(reminder)
             }
         }
         

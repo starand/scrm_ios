@@ -25,6 +25,28 @@
 		62E8E15421A0587F007BD358 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8E15321A0587F007BD358 /* Category.swift */; };
 		62E8E15621A0588C007BD358 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8E15521A0588C007BD358 /* Task.swift */; };
 		62E8E15821A0589A007BD358 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8E15721A0589A007BD358 /* Note.swift */; };
+		62E8E15A21A98F81007BD358 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8E15921A98F81007BD358 /* CategoryTableViewCell.swift */; };
+		62E8E15D21A9929C007BD358 /* category.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8E15C21A9929C007BD358 /* category.png */; };
+		62E8E15F21A994AC007BD358 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8E15E21A994AC007BD358 /* ContactTableViewCell.swift */; };
+		62E8E16221A99653007BD358 /* contact_man.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8E16021A99653007BD358 /* contact_man.png */; };
+		62E8E16321A99653007BD358 /* contact_woman.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8E16121A99653007BD358 /* contact_woman.png */; };
+		62E8E16521A9965F007BD358 /* add-note.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8E16421A9965F007BD358 /* add-note.png */; };
+		62E8E16721A99674007BD358 /* mail-to.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8E16621A99674007BD358 /* mail-to.png */; };
+		62E8E16921A99685007BD358 /* phone.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8E16821A99685007BD358 /* phone.png */; };
+		62E8E16B21ABF21A007BD358 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8E16A21ABF21A007BD358 /* Cache.swift */; };
+		62E8E16D21ABFE86007BD358 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8E16C21ABFE86007BD358 /* TaskTableViewCell.swift */; };
+		62E8E16F21ABFE93007BD358 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8E16E21ABFE93007BD358 /* NoteTableViewCell.swift */; };
+		62E8E17121AC0125007BD358 /* task.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8E17021AC0125007BD358 /* task.png */; };
+		62E8E17321AC0140007BD358 /* note.ico in Resources */ = {isa = PBXBuildFile; fileRef = 62E8E17221AC0140007BD358 /* note.ico */; };
+		62E8E17721AC0637007BD358 /* email.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8E17621AC0637007BD358 /* email.png */; };
+		62E8E17921AC0BA2007BD358 /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8E17821AC0BA2007BD358 /* AddNoteViewController.swift */; };
+		62E8E17B21AC0BAF007BD358 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8E17A21AC0BAF007BD358 /* AddTaskViewController.swift */; };
+		62E8E17D21AC1E7E007BD358 /* trash.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E8E17C21AC1E7D007BD358 /* trash.png */; };
+		62E8E18121AC2AA6007BD358 /* ComboPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8E18021AC2AA6007BD358 /* ComboPickerView.swift */; };
+		62E8E18321AC39E8007BD358 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8E18221AC39E8007BD358 /* AddContactViewController.swift */; };
+		62E8E18521AC400F007BD358 /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8E18421AC400F007BD358 /* AddCategoryViewController.swift */; };
+		62E8E18721AC4DDE007BD358 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8E18621AC4DDE007BD358 /* Reminder.swift */; };
+		62E8E18921AC518A007BD358 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E8E18821AC518A007BD358 /* DateUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +70,28 @@
 		62E8E15321A0587F007BD358 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		62E8E15521A0588C007BD358 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		62E8E15721A0589A007BD358 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		62E8E15921A98F81007BD358 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		62E8E15C21A9929C007BD358 /* category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category.png; sourceTree = "<group>"; };
+		62E8E15E21A994AC007BD358 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		62E8E16021A99653007BD358 /* contact_man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_man.png; sourceTree = "<group>"; };
+		62E8E16121A99653007BD358 /* contact_woman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contact_woman.png; sourceTree = "<group>"; };
+		62E8E16421A9965F007BD358 /* add-note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-note.png"; sourceTree = "<group>"; };
+		62E8E16621A99674007BD358 /* mail-to.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mail-to.png"; sourceTree = "<group>"; };
+		62E8E16821A99685007BD358 /* phone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = phone.png; sourceTree = "<group>"; };
+		62E8E16A21ABF21A007BD358 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		62E8E16C21ABFE86007BD358 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
+		62E8E16E21ABFE93007BD358 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
+		62E8E17021AC0125007BD358 /* task.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = task.png; sourceTree = "<group>"; };
+		62E8E17221AC0140007BD358 /* note.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = note.ico; sourceTree = "<group>"; };
+		62E8E17621AC0637007BD358 /* email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = email.png; sourceTree = "<group>"; };
+		62E8E17821AC0BA2007BD358 /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
+		62E8E17A21AC0BAF007BD358 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		62E8E17C21AC1E7D007BD358 /* trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash.png; sourceTree = "<group>"; };
+		62E8E18021AC2AA6007BD358 /* ComboPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComboPickerView.swift; sourceTree = "<group>"; };
+		62E8E18221AC39E8007BD358 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
+		62E8E18421AC400F007BD358 /* AddCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
+		62E8E18621AC4DDE007BD358 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		62E8E18821AC518A007BD358 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +116,14 @@
 				62E46C11217F6A97006F1B95 /* Main.storyboard */,
 				62E46C16217F6A9A006F1B95 /* LaunchScreen.storyboard */,
 				625C0A612184633900EBFCDA /* LoginViewController.swift */,
+				62E8E15921A98F81007BD358 /* CategoryTableViewCell.swift */,
+				62E8E15E21A994AC007BD358 /* ContactTableViewCell.swift */,
+				62E8E16C21ABFE86007BD358 /* TaskTableViewCell.swift */,
+				62E8E16E21ABFE93007BD358 /* NoteTableViewCell.swift */,
+				62E8E17821AC0BA2007BD358 /* AddNoteViewController.swift */,
+				62E8E17A21AC0BAF007BD358 /* AddTaskViewController.swift */,
+				62E8E18221AC39E8007BD358 /* AddContactViewController.swift */,
+				62E8E18421AC400F007BD358 /* AddCategoryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -83,6 +135,8 @@
 				625C0A6621846B9200EBFCDA /* NetworkUtils.swift */,
 				625C0A682184873800EBFCDA /* UIUtils.swift */,
 				62E8E14E21A05848007BD358 /* JsonUtils.swift */,
+				62E8E16A21ABF21A007BD358 /* Cache.swift */,
+				62E8E18821AC518A007BD358 /* DateUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -106,12 +160,14 @@
 		62E46C0C217F6A97006F1B95 /* scrm */ = {
 			isa = PBXGroup;
 			children = (
+				62E8E15B21A99289007BD358 /* images */,
 				62E46C0D217F6A97006F1B95 /* AppDelegate.swift */,
 				625C0A60218460A400EBFCDA /* ViewControllers */,
 				62E46C14217F6A9A006F1B95 /* Assets.xcassets */,
 				62E46C19217F6A9A006F1B95 /* Info.plist */,
 				625C0A6521846B4A00EBFCDA /* Utils */,
 				62E8E15221A05867007BD358 /* Types */,
+				62E8E18021AC2AA6007BD358 /* ComboPickerView.swift */,
 			);
 			path = scrm;
 			sourceTree = "<group>";
@@ -123,8 +179,26 @@
 				62E8E15321A0587F007BD358 /* Category.swift */,
 				62E8E15521A0588C007BD358 /* Task.swift */,
 				62E8E15721A0589A007BD358 /* Note.swift */,
+				62E8E18621AC4DDE007BD358 /* Reminder.swift */,
 			);
 			path = Types;
+			sourceTree = "<group>";
+		};
+		62E8E15B21A99289007BD358 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				62E8E17C21AC1E7D007BD358 /* trash.png */,
+				62E8E17221AC0140007BD358 /* note.ico */,
+				62E8E17021AC0125007BD358 /* task.png */,
+				62E8E16821A99685007BD358 /* phone.png */,
+				62E8E17621AC0637007BD358 /* email.png */,
+				62E8E16621A99674007BD358 /* mail-to.png */,
+				62E8E16421A9965F007BD358 /* add-note.png */,
+				62E8E16021A99653007BD358 /* contact_man.png */,
+				62E8E16121A99653007BD358 /* contact_woman.png */,
+				62E8E15C21A9929C007BD358 /* category.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +260,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				62E46C18217F6A9A006F1B95 /* LaunchScreen.storyboard in Resources */,
+				62E8E16721A99674007BD358 /* mail-to.png in Resources */,
+				62E8E16221A99653007BD358 /* contact_man.png in Resources */,
+				62E8E16521A9965F007BD358 /* add-note.png in Resources */,
+				62E8E17D21AC1E7E007BD358 /* trash.png in Resources */,
+				62E8E15D21A9929C007BD358 /* category.png in Resources */,
+				62E8E16921A99685007BD358 /* phone.png in Resources */,
+				62E8E17721AC0637007BD358 /* email.png in Resources */,
+				62E8E17321AC0140007BD358 /* note.ico in Resources */,
+				62E8E17121AC0125007BD358 /* task.png in Resources */,
+				62E8E16321A99653007BD358 /* contact_woman.png in Resources */,
 				62E46C15217F6A9A006F1B95 /* Assets.xcassets in Resources */,
 				62E46C13217F6A97006F1B95 /* Main.storyboard in Resources */,
 			);
@@ -201,18 +285,30 @@
 				62E8E15121A05861007BD358 /* Contact.swift in Sources */,
 				625C0A622184633900EBFCDA /* LoginViewController.swift in Sources */,
 				62E8E14721A055D8007BD358 /* PeopleViewController.swift in Sources */,
+				62E8E16F21ABFE93007BD358 /* NoteTableViewCell.swift in Sources */,
+				62E8E18921AC518A007BD358 /* DateUtils.swift in Sources */,
 				62E8E14F21A05848007BD358 /* JsonUtils.swift in Sources */,
 				62E46C10217F6A97006F1B95 /* ViewController.swift in Sources */,
 				62E8E15821A0589A007BD358 /* Note.swift in Sources */,
 				62E8E14D21A055F9007BD358 /* HistoryViewController.swift in Sources */,
+				62E8E15A21A98F81007BD358 /* CategoryTableViewCell.swift in Sources */,
+				62E8E18721AC4DDE007BD358 /* Reminder.swift in Sources */,
 				62E8E14921A055E6007BD358 /* PersonViewController.swift in Sources */,
 				625C0A6721846B9200EBFCDA /* NetworkUtils.swift in Sources */,
+				62E8E18521AC400F007BD358 /* AddCategoryViewController.swift in Sources */,
+				62E8E16B21ABF21A007BD358 /* Cache.swift in Sources */,
+				62E8E16D21ABFE86007BD358 /* TaskTableViewCell.swift in Sources */,
 				625C0A692184873800EBFCDA /* UIUtils.swift in Sources */,
+				62E8E17921AC0BA2007BD358 /* AddNoteViewController.swift in Sources */,
 				62E8E15421A0587F007BD358 /* Category.swift in Sources */,
 				625C0A64218463A300EBFCDA /* UserUtils.swift in Sources */,
+				62E8E17B21AC0BAF007BD358 /* AddTaskViewController.swift in Sources */,
+				62E8E18121AC2AA6007BD358 /* ComboPickerView.swift in Sources */,
 				62E46C0E217F6A97006F1B95 /* AppDelegate.swift in Sources */,
 				62E8E15621A0588C007BD358 /* Task.swift in Sources */,
+				62E8E18321AC39E8007BD358 /* AddContactViewController.swift in Sources */,
 				62E8E14B21A055EE007BD358 /* TasksViewController.swift in Sources */,
+				62E8E15F21A994AC007BD358 /* ContactTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
